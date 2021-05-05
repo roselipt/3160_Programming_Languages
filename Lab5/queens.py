@@ -1,12 +1,18 @@
 # 8-queens Problem
 
 def make_board() :
+    """Function creates an open chess board as a dictionary and returns it.
+
+    An empty dictionary is populated with tuples, each one a set of coordinates (x, y),
+    numbering from top left (0,0), and associated with a value which is set to 0.
+    Changing this number to a 1 will represent the placement of a queen.
+    """
+
     d={}
     for col in range(0,8) :
         for row in range(0, 8) :
             d[col, row] = 0
     return d
-    #print(d)
 
 def show_board(d) :
     for row in range(0,8) :
